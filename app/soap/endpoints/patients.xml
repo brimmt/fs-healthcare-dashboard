@@ -1,0 +1,75 @@
+<Patients>
+    <Patient>
+        <ID>1</ID>
+        <Name>John Doe</Name>
+        <Gender>Male</Gender>
+        <DOB>1980-04-12</DOB>
+    </Patient>
+    <Patient>
+        <ID>2</ID>
+        <Name>Kara Ole</Name>
+        <Gender>Female</Gender>
+        <DOB>1979-09-30</DOB>
+    </Patient>
+    <Patient>
+        <ID>3</ID>
+        <Name>Kenny Dope</Name>
+        <Gender>Male</Gender>
+        <DOB>1980-04-12</DOB>
+    </Patient>
+    <Patient>
+        <ID>4</ID>
+        <Name>Kelly Mith</Name>
+        <Gender>Female</Gender>
+        <DOB>1970-09-30</DOB>
+    </Patient>
+    <Patient>
+        <ID>5</ID>
+        <Name>James Doe</Name>
+        <Gender>Male</Gender>
+        <DOB>1971-04-12</DOB>
+    </Patient>
+    <Patient>
+        <ID>6</ID>
+        <Name>Sarah Hall</Name>
+        <Gender>Female</Gender>
+        <DOB>1988-09-30</DOB>
+    </Patient>
+    <Patient>
+        <ID>7</ID>
+        <Name>Paul Mix</Name>
+        <Gender>Male</Gender>
+        <DOB>1980-04-12</DOB>
+    </Patient>
+    <Patient>
+        <ID>8</ID>
+        <Name>Maxirna Smith</Name>
+        <Gender>Female</Gender>
+        <DOB>1976-09-30</DOB>
+    </Patient>
+    <Patient>
+        <ID>9</ID>
+        <Name>Tommy Williams</Name>
+        <Gender>Male</Gender>
+        <DOB>1988-04-12</DOB>
+    </Patient>
+    <Patient>
+        <ID>10</ID>
+        <Name>Sarah Smith</Name>
+        <Gender>Female</Gender>
+        <DOB>1976-02-13</DOB>
+    </Patient>
+    <Patient>
+        <ID>11</ID>
+        <Name>Joe Doe</Name>
+        <Gender>Male</Gender>
+        <DOB>1988-04-12</DOB>
+    </Patient>
+    <Patient>
+        <ID>12</ID>
+        <Name>Ben Smith</Name>
+        <Gender>Male</Gender>
+        <DOB>1976-09-30</DOB>
+    </Patient>
+   
+</Patients>

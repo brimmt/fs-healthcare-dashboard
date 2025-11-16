@@ -1,0 +1,9 @@
+fastapi
+httpx
+xmltodict
+python-dotenv
+supabase
+openai
+uvicorn
+pydantic
+requests
