@@ -1,7 +1,8 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 from uuid import UUID
 from datetime import datetime
+from schemas.encounter_schema import EncounterSchema
 
 class PatientSchema(BaseModel):
     id: UUID
@@ -11,5 +12,7 @@ class PatientSchema(BaseModel):
     blood_type: str
     created_at: Optional[datetime] = None
 
-    class Config:
-        orm_mode = True
+
+class PatientDetailResponse(BaseModel):
+    patient: PatientSchema
+    encounters: List[EncounterSchema]

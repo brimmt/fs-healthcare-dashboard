@@ -8,6 +8,3 @@ class TestResultSchema(BaseModel):
     encounter_id: UUID
     test_results: str
     created_at: Optional[datetime] = None
-
-    class Config:
-        orm_mode = True
