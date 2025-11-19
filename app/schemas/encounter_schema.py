@@ -16,5 +16,3 @@ class EncounterSchema(BaseModel):
     admission_type: Optional[str]
     created_at: Optional[datetime] = None
 
-    class Config:
-        orm_mode = True

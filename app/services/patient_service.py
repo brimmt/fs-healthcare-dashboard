@@ -19,3 +19,7 @@ def get_patient_by_id(patient_id: UUID):
     )
 
     return response.data
+
+
+
+def
