@@ -21,6 +21,17 @@ def get_patient_by_id(patient_id: UUID):
 
     return response.data
 
+def get_patient_by_name(patient_name: str):
+     response = (
+          supabase.table(PATIENT_TABLE)
+          .select('*')
+          .eq('patient_name', str(patient_name))
+          .limit(100)
+          .execute()
+     )
+
+     return response.data
+
 
 
 def get_patient_details(patient_id: UUID):
