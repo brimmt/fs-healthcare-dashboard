@@ -6,11 +6,13 @@ router = APIRouter(prefix="/soap", tags=["SOAP"])
 
 BASE_PATH = os.path.join(os.path.dirname(__file__), "endpoints")
 
+
 def load_xml(filename: str) -> str:
     file_path = os.path.join(BASE_PATH, filename)
     with open(file_path, "r") as f:
         return f.read()
-    
+
+
 @router.get("/GetPatients")
 def get_patients():
     xml_data = load_xml("patients.xml")
@@ -33,6 +35,3 @@ def get_conditions():
 def get_test_results():
     xml_data = load_xml("test_results")
     return Response(content=xml_data, media_type="application/xml")
-
-
-

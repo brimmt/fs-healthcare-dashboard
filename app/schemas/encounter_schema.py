@@ -5,6 +5,7 @@ from datetime import date, datetime
 from app.schemas.condition_schema import ConditionSchema
 from app.schemas.test_result_schema import TestResultSchema
 
+
 class EncounterSchema(BaseModel):
     id: UUID
     patient_id: UUID
@@ -22,4 +23,3 @@ class EncounterSchema(BaseModel):
 class EncounterDetailSchema(EncounterSchema):
     conditions: Optional[List[ConditionSchema]] = []
     test_results: Optional[List[TestResultSchema]] = []
-

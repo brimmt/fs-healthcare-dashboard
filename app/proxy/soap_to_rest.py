@@ -1,9 +1,6 @@
 import requests
 from app.soap.parser import parse_xml
-from app.proxy.mappings import (
-    map_patient_soap_to_rest,
-    map_encounter_soap_to_rest
-)
+from app.proxy.mappings import map_patient_soap_to_rest, map_encounter_soap_to_rest
 
 SOAP_BASE_URL = "http://127.0.0.1:8000/soap"
 

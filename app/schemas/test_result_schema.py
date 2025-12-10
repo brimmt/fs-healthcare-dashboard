@@ -3,6 +3,7 @@ from typing import Optional
 from uuid import UUID
 from datetime import datetime
 
+
 class TestResultSchema(BaseModel):
     id: UUID
     encounter_id: UUID

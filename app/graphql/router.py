@@ -5,5 +5,3 @@ from app.graphql.schema import schema
 router = APIRouter()
 graphql_app = GraphQLRouter(schema)
 router.include_router(graphql_app, prefix="/graphql", tags=["GraphQL"])
-
-

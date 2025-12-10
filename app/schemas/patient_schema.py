@@ -4,6 +4,7 @@ from uuid import UUID
 from datetime import datetime
 from app.schemas.encounter_schema import EncounterSchema, EncounterDetailSchema
 
+
 class PatientSchema(BaseModel):
     id: UUID
     patient_name: str

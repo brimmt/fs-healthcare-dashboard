@@ -10,23 +10,23 @@ from app.api.v1.test_results_router import router as test_results_router
 from app.graphql.router import router as graphql_router
 
 
-app = FastAPI(title="Healthcare Modernization API",
-              version="1.0.0",
-              description="SOAP -> Proxy -> Rest -> FastAPI backend with Supabase")
-
+app = FastAPI(
+    title="Healthcare Modernization API",
+    version="1.0.0",
+    description="SOAP -> Proxy -> Rest -> FastAPI backend with Supabase",
+)
 
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  #Tati <-- dont forget to change this after testing
+    allow_origins=["*"],  # Tati <-- dont forget to change this after testing
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 
-
-#Routers
+# Routers
 
 app.include_router(soap_router)
 app.include_router(patients_router)

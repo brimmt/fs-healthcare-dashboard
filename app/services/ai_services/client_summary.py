@@ -23,6 +23,7 @@ Do not make assumptions beyond the provided information.
 
 # Building the prompt for the AI model
 
+
 def build_summary_prompt(patient_details: dict):
     patient = patient_details.get("patient", {})
     encounters = patient_details.get("encounters", [])
@@ -61,7 +62,6 @@ Highlight:
 
 Do NOT hallucinate or assume information not explicitly provided.
 """
-
 
 
 # Function to generate the client summary using OpenAI
