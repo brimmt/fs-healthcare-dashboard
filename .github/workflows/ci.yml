@@ -32,6 +32,10 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install pytest pytest-mock
+        
+      - name: Set test env
+        run: |
+          echo "USE_FAKE_SUPABASE=true" >> $GITHUB_ENV
 
       - name: Run tests
         run: pytest -q
