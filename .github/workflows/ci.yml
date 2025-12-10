@@ -36,6 +36,7 @@ jobs:
       - name: Set test env
         run: |
           echo "USE_FAKE_SUPABASE=true" >> $GITHUB_ENV
+          echo "USE_FAKE_OPENAI=true" >> $GITHUB_ENV
 
       - name: Run tests
         run: pytest -q

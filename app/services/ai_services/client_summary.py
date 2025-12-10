@@ -4,11 +4,34 @@ import os
 
 
 load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-if not OPENAI_API_KEY:
-    raise ValueError("OPENAI_API_KEY environment variable not set.")
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+USE_FAKE_OPENAI = os.getenv("USE_FAKE_OPENAI", "false").lower() == "true"
+
+if USE_FAKE_OPENAI:
+    # Fake client for unit tests
+    class FakeOpenAIClient:
+        def chat(self):
+            class FakeChat:
+                def completions(self):
+                    class FakeCompletions:
+                        @staticmethod
+                        def create(**kwargs):
+                            return type(
+                                "FakeResponse",
+                                (),
+                                {"choices": [type("msg", (), {"message": type("M", (), {"content": "FAKE SUMMARY"})()})]}
+                            )
+                    return FakeCompletions()
+            return FakeChat()
+
+    client = FakeOpenAIClient()
+
+else:
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    if not OPENAI_API_KEY:
+        raise ValueError("OPENAI_API_KEY environment variable not set.")
+
+    client = OpenAI(api_key=OPENAI_API_KEY)
 
 
 SYSTEM_MESSAGE = """ 
