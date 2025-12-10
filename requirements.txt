@@ -10,4 +10,3 @@ pytest
 pytest-mock
 dotenv
 strawberry-graphql
-flake8

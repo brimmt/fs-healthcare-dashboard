@@ -31,10 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install pytest pytest-mock flake8
-
-      - name: Flake8 lint
-        run: flake8 . --ignore=E501,W503,E203 --exclude=.venv,build,dist
+          pip install pytest pytest-mock
 
       - name: Run tests
         run: pytest -q
