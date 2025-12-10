@@ -1,9 +1,7 @@
 """Testing all Test Result Service Functions """
 
-import pytest
 from uuid import uuid4
 
-from pytest_mock import mocker
 from app.services.test_result_service import (
     get_test_results_by_id,
     get_all_test_results,

@@ -3,7 +3,6 @@
 import pytest
 from uuid import uuid4
 
-from pytest_mock import mocker
 from app.services.encounter_service import (
     get_encounter_by_id,
     get_all_encounters,

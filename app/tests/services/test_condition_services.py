@@ -3,7 +3,6 @@
 import pytest
 from uuid import uuid4
 
-from pytest_mock import mocker
 from app.services.condition_service import (
     get_condition_by_id,
     get_all_conditions,
