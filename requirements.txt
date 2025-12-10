@@ -10,5 +10,4 @@ pytest
 pytest-mock
 dotenv
 strawberry-graphql
-black
 flake8
