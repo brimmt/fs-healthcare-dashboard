@@ -26,9 +26,11 @@ jobs:
             git fetch origin master
             git reset --hard origin/master
 
-            echo "Stopping old container (if any)..."
-            docker stop healthcare || true
-            docker rm healthcare || true
+            echo "Stopping any container using port 8000..."
+            docker ps -q --filter "publish=8000" | xargs -r docker stop
+
+            echo "Removing old container named healthcare..."
+            docker rm -f healthcare || true
 
             echo "Building new Docker image..."
             docker build -t healthcare-backend .
@@ -40,4 +42,4 @@ jobs:
               -p 8000:8000 \
               healthcare-backend
 
-            echo "Deployment complete.
+            echo "Deployment complete."
