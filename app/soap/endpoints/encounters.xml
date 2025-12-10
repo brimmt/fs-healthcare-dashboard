@@ -1,0 +1,21 @@
+<Encounters>
+    <Encounter>
+        <EncounterID>101</EncounterID>
+        <PatientID>1</PatientID>
+        <Diagnosis>
+            <Code>I10</Code>
+            <Description>Essential (primary) hypertension</Description>
+        </Diagnosis>
+        <AdmissionType>Emergency</AdmissionType>
+    </Encounter>
+
+    <Encounter>
+        <EncounterID>102</EncounterID>
+        <PatientID>2</PatientID>
+        <Diagnosis>
+            <Code>J45.909</Code>
+            <Description>Unspecified asthma, uncomplicated</Description>
+        </Diagnosis>
+        <AdmissionType>Elective</AdmissionType>
+    </Encounter>
+</Encounters>

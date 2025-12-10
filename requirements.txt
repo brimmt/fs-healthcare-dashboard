@@ -1,0 +1,14 @@
+fastapi
+xmltodict
+python-dotenv
+supabase
+openai
+uvicorn
+pydantic
+requests
+pytest
+pytest-mock
+dotenv
+strawberry-graphql
+black
+flake8
